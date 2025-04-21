@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Identitas Kelas 8.6</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+
+    #dataSiswa {
+      margin-top: 20px;
+      display: none;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+
+    #dataSiswa.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    table {
+      width: 90%;
+      border-collapse: collapse;
+      margin-bottom: 1em;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+
+    #showDataButton {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      border-radius: 5px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    }
+
+    #showDataButton:hover {
+      background-color: #45a049;
+    }
+
+    #footer {
+      text-align: center;
+      margin-top: 2em;
+      padding: 1em;
+      background-color: #f0f0f0;
+      border-top: 1px solid #ddd;
+      width: 90%;
+    }
+
+    #footerText {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid #333;
+      width: 0;
+      animation:
+        typing 3s steps(30, end) forwards,
+        blink 0.75s step-end infinite;
+      font-weight: bold;
+      background: linear-gradient(90deg, #ff4d4d, #ffcc00, #33cc33, #3399ff, #cc33ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Identitas Kelas 8.6</h1>
+<h2>Wali Kelas: Desmiati</h2>
+
+<!-- Tombol untuk Menampilkan Data -->
+<button id="showDataButton">Tampilkan Data Muhammad Rizky Fahrianto</button>
+
+<div id="dataSiswa" class="show">
+  <table id="tabelSiswa">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Nama</th>
+        <th>Umur</th>
+        <th>Tanggal Lahir</th>
+        <th>Asal</th>
+        <th>Sifat</th>
+        <th>Hobi</th>
+        <th>Makanan</th>
+        <th>Minuman</th>
+        <th>Gabut</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Muhammad Rizky Fahrianto</td>
+        <td>15</td>
+        <td>19/01/2009</td>
+        <td>Tembilahan</td>
+        <td>Baik, Ramah</td>
+        <td>Ngoding, Main Game</td>
+        <td>Ayam Goreng</td>
+        <td>Es Teh</td>
+        <td>Game, Ngoding</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>M.Naufal Aditya Saputra</td>
+        <td>14</td>
+        <td>18/03/2011</td>
+        <td>Tembilahan</td>
+        <td>Aneh, Baik</td>
+        <td>Ngikut Orang</td>
+        <td>Ayam</td>
+        <td>Es Teh</td>
+        <td>Mikir Sana Sini</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>M. Alfath Riziq</td>
+        <td>14</td>
+        <td>06/08/2010</td>
+        <td>Tembilahan</td>
+        <td>Baik</td>
+        <td>Main Bola</td>
+        <td>Nasi Padang</td>
+        <td>Es Teh</td>
+        <td>Main Game</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div id="footer">
+  <div id="footerText">Dibuat oleh Ikyy</div>
+  <button id="contactButton" onclick="window.location.href='https://wa.me/6285764413880?text=Halo%20Ikyy%20saya%20mau%20tanya%20tentang%20kelas%208.6'">WhatsApp Ikyy</button>
+</div>
+
+<script>
+  // Mendapatkan tombol dan elemen data
+  const showDataButton = document.getElementById("showDataButton");
+  const dataSiswa = document.getElementById("dataSiswa");
+
+  // Menampilkan data siswa saat tombol diklik
+  showDataButton.addEventListener("click", function() {
+    dataSiswa.classList.add("show");
+  });
+</script>
+
+</body>
+</html>
